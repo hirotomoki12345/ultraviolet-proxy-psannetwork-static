@@ -5,7 +5,7 @@
     <title>Ultraviolet | Sophisticated Web Proxy</title>
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="index.css" />
-    <script src="baremux/bare.cjs" defer></script>
+    <script src="baremux/index.js" defer></script>
     <script src="epoxy/index.js" defer></script>
     <script src="uv/uv.bundle.js" defer></script>
     <script src="uv/uv.config.js" defer></script>
@@ -47,6 +47,32 @@
     </script>
 
     <style>
+        a {
+            color: #800080;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #800080;
+            text-decoration: underline;
+        }
+        
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #800080;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        a.button:hover {
+            background-color: #800080;
+        }
+
         .centered-div {
             width: 900px;
             height: 600px;
@@ -65,13 +91,13 @@
             position: absolute;
             top: 10px;  
             right: 10px;
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background-color: #431a4c; 
             color: rgb(197, 170, 223);
             border: none;
-            font-size: 20px; 
+            font-size: 16px; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -131,6 +157,7 @@
     </ul>
     <iframe style="display: none;" id="uv-frame"></iframe>
     <div id="loader" class="loader"></div>
+    <ul><a href="credits.html">Credit</a></ul>
 
     <script>
         function changesearchengine(engineUrl) {
@@ -148,8 +175,7 @@
             const query = document.getElementById('uv-address').value;
             const searchUrl = searchEngine.replace('%s', encodeURIComponent(query));
             document.getElementById('uv-frame').src = searchUrl;
-        }
-    </script>
+        }    </script>
 
     <button class="AIbutton" onclick="toggleMenu(this)">☰</button>
     <div id="myDiv" class="centered-div">
@@ -194,7 +220,10 @@
             }
 
             submitButton.disabled = false;
-        }
-    </script>
-</body>
+        }    </script>
+    <script src="adblock.js"></script>
+    <script src="youtube-skip.js"></script>
+    <script src="youtube_dl.js"></script>
+
+</body>    
 </html>
